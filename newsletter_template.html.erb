@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/
+      v2.0 | 20110126
+      License: none (public domain)
+      */
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      /*
+      Typography
+      */
+      h1 {
+        color: #262626;
+        font-family: "Enriqueta", serif;
+        font-size: 44px;
+        line-height: 48px;
+        margin: 0 0 30px;
+      }
+      h2 {
+        color: #262626;
+        font-family: "Enriqueta", serif;
+        font-size: 32px;
+        font-weight: normal;
+        line-height: 42px;
+        margin: 0 0 24px;
+        padding: 12px 0 0;
+      }
+      h3 {
+        color: #D7D1C6;
+        font-family: "Enriqueta", serif;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 24px;
+        margin: 0 0 12px;
+        padding: 12px 0 0;
+        text-transform: uppercase;
+      }
+      h4 {
+        color: #fff;
+        font-family: "Enriqueta", serif;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      p {
+        color: #2f2f2f;
+        font-family: Georgia, serif;
+        font-size: 17px;
+        line-height: 24px;
+        margin: 0 0 24px;
+      }
+
+      /*
+      Newsletter Styling
+      */
+      .container {
+        width: 700px;
+      }
+      #header {
+        background-color: #d7d1c6;
+        width: 700px;
+      }
+      #logo {
+        width: 225px;
+        float: left;
+      }
+      #ad-top{
+        width: 475px;
+        float: right;
+      }
+      #ad-top-img {
+        float: right;
+      }
+      #subheader {
+        padding: 10px 20px;
+        background-color: #536F74;
+        color: #f0f0f0;
+        text-align: center;
+      }
+      #subheader a {
+        text-decoration: none;
+        color: #f0f0f0;
+      }
+      .article{
+        width: 700px;
+      }
+      .photo-container {
+        width: 260px;
+        float: left;
+      }
+      .photo {
+        padding-left: 10px;
+        width: 240px;
+      }
+      .content {
+        width: 420px;
+        float: right;
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      .content-header {
+        background-color: #676554;
+        padding: 0px 10px 10px 10px;
+        margin-bottom: 0;
+      }
+      .content-header a {
+        text-decoration: none;
+      }
+      .ad-slot-img {
+        padding-left: 10px;
+        margin: 0 auto;
+      }
+      .ad-slot-left {
+        float: left;
+      }
+      .ad-slot-right {
+        float: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table class="container">
+
+      <tr id="header">
+        <td id="logo">
+          <a href="http://www.ridemagazine.com/">
+            <img src="http://www.ridemagazine.com/sites/default/files/multiflex3_logo.jpg">
+          </a>
+        </td>
+        <td id="ad-top">
+          <a id="ad-top-img" href="#"><img src="http://placehold.it/450x100"></a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+            <h3 id="subheader">Catch up on the latest horse news from
+              <a href="http://www.ridemagazine.com/">Ridemagazine.com</a>
+            </h3>
+        </td>
+      </tr>
+
+      <% @articles.each do |article| %>
+        <tr class="article">
+          <td class="photo-container">
+            <a href="<%= article[:url] %>">
+              <img class="photo" src="<%= article[:photo] %>">
+            </a>
+          </td>
+          <td class="content content-header">
+            <a href="<%= article[:url] %>">
+              <h3><%= article[:title] %></h3>
+            </a>
+            <h4>by <%= article[:author] %></h4>
+          </td>
+          <td class="content">
+            <p><%= article[:preview] %></p>
+          </td>
+        </tr>
+
+        <% if article[:ad_1_url] != nil %>
+          <tr><td><hr></td></tr>
+          <tr>
+            <td class="ad-slot-left">
+              <a href="<%= article[:ad_1_url] %>">
+                <img class="ad-slot-img" src="<%= article[:ad_1_image] %>">
+              </a>
+            </td>
+
+            <% if article[:ad_2_url] != nil %>
+              <td class="ad-slot-right">
+                <a href="<%= article[:ad_2_url] %>">
+                  <img class="ad-slot-img" src="<%= article[:ad_2_image] %>">
+                </a>
+              </td>
+            <% end %>
+          </tr>
+          <tr><td><hr></td></tr>
+        <% end %>
+      <% end %>
+
+    </table>
+  </body>
+
+</html>
