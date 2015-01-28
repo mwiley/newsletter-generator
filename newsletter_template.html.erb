@@ -8,16 +8,18 @@
 
   <body>
     <table class="container">
-
       <tr id="header">
         <td id="logo">
           <a href="http://www.ridemagazine.com/">
             <img src="http://www.ridemagazine.com/sites/default/files/multiflex3_logo.jpg">
           </a>
         </td>
-        <td id="ad-top">
-          <a id="ad-top-img" href="#"><img src="http://placehold.it/450x100"></a>
-        </td>
+
+        <% if @top_ad != nil %>
+          <td id="ad-top">
+            <a id="ad-top-img" href="<%= @top_ad[:url] %>"><img src="<%= @top_ad[:image] %>"></a>
+          </td>
+        <% end %>
       </tr>
 
       <tr>
@@ -46,19 +48,19 @@
           </td>
         </tr>
 
-        <% if article[:ad_1_url] != nil %>
+        <% if article[:ad_1] != nil %>
           <tr><td><hr></td></tr>
           <tr>
             <td class="ad-slot-left">
-              <a href="<%= article[:ad_1_url] %>">
-                <img class="ad-slot-img" src="<%= article[:ad_1_image] %>">
+              <a href="<%= article[:ad_1][:url] %>">
+                <img class="ad-slot-img" src="<%= article[:ad_1][:image] %>">
               </a>
             </td>
 
-            <% if article[:ad_2_url] != nil %>
+            <% if article[:ad_2] != nil %>
               <td class="ad-slot-right">
-                <a href="<%= article[:ad_2_url] %>">
-                  <img class="ad-slot-img" src="<%= article[:ad_2_image] %>">
+                <a href="<%= article[:ad_2][:url] %>">
+                  <img class="ad-slot-img" src="<%= article[:ad_2][:image] %>">
                 </a>
               </td>
             <% end %>
@@ -69,5 +71,4 @@
 
     </table>
   </body>
-
 </html>
