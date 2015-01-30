@@ -1,8 +1,9 @@
 require 'erb'
 load 'articles.rb'
-
-@stylesheet = File.read("style.css").to_s
+minify = true
 
 File.open("newsletter_out.html", "w") do |file|
-  file.write ERB.new(File.read("newsletter_template.html.erb")).result(binding)
+  output = ERB.new(File.read("template/newsletter.html.erb")).result(binding).to_s
+  output = output.gsub(/(\n|\t|\r)/, ' ').gsub(/>\s*</, '><').squeeze(' ') if minify
+  file.write output
 end
