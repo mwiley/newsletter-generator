@@ -51,14 +51,14 @@ Typography
 */
 h1 {
     color: #262626;
-    font-family: "Enriqueta", serif;
+    font-family: Georgia, serif;
     font-size: 44px;
     line-height: 48px;
     margin: 0 0 30px;
 }
 h2 {
     color: #262626;
-    font-family: "Enriqueta", serif;
+    font-family: Georgia, serif;
     font-size: 32px;
     font-weight: normal;
     line-height: 42px;
@@ -67,7 +67,7 @@ h2 {
 }
 h3 {
     color: #D7D1C6;
-    font-family: "Enriqueta", serif;
+    font-family: Georgia, serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 24px;
@@ -77,7 +77,7 @@ h3 {
 }
 h4 {
     color: #fff;
-    font-family: "Enriqueta", serif;
+    font-family: Georgia, serif;
     font-size: 14px;
     font-weight: bold;
 }
