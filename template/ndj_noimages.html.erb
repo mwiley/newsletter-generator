@@ -1,0 +1,19 @@
+<img src="https://nextdayjumps.com/sites/default/files/barlow_logo.jpg" width="635px" height="93px">
+<h3>Sale on Horse Jumps from <a href="http://nextdayjumps.com/">NextDayJumps.com</a>! </h3>
+<p>Lowest prices in 5 years, order now for immediate delivery. Free shipping to 48 states.</p>
+<hr>
+
+<% @products.each do |product| %>
+    <p style="font-size: 14px;">
+      <b><a href="<%= product[:url] %>" ><%= product[:name] %></a></b> <br />
+      Regularly: $<%= product[:price_regular] %> <br />
+      On Sale: $<b><%= product[:price_sale] %></b>,
+      save <b> $<%= product[:price_regular] - product[:price_sale] %></b> <br />
+    </p>
+<% end %>
+
+<p><a target="_blank" style="text-decoration:none;" href= "https://www.nextdayjumps.com"> Next Day Jumps, Great Jumps, In Stock, Shipped Tomorrow</a><br>
+  <a target="_blank" style="text-decoration:none;" href= "https://www.nextdayjumps.com/contact"> Contact Us</a>:
+  Phone Orders: <a style="text-decoration:none;" href="tel:530-343-9994%20x23" value="+15303439994" target="_blank">530-343-9994 x23</a> &middot;
+  E-mail: <a target="_blank" style="text-decoration:none;" href="mailto:danswofford@gmail.com">danswofford@gmail.com</a>
+</p>
