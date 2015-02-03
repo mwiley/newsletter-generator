@@ -1,9 +1,16 @@
-# The following variables set here will be used to generate a newsletter from the template.
 # @top_ad = { url: "", image: "" } (optional)
 # @articles =  [{ title: '', url: '', photo: '', preview: '', author: '', ad_1: { url: '', image: ''}, ad_2: { url: '', image: ''} }, ...]
 # For each article, author, ad_1, and ad_2 are optional.
+@template = "template/newsletter.html.erb"
 
 @articles = [
+    {
+        title: 'Adventures With Best Of America By Horseback Television Show',
+        url: 'http://www.ridemagazine.com/horse/article/adventures-best-america-horseback-television-show',
+        photo: 'http://www.ridemagazine.com/sites/default/files/imagecache/editorial_main/editorial/6868/tom_at_old_hacienda.jpg',
+        author: 'Tom Seay',
+        preview: 'Like most of you, my love of riding began with a pony years ago where I dreamed of someday riding in the places that I watched in western movies and perhaps with my friends to the far corners of America. Reality and growing up has a way of altering our dreams but horse people seem to preserve their dreams throughout their lives.'
+    },
     {
         title: 'Bit And Cavasons Cruelly Used On Horses And A Horse Named Babe',
         url: 'http://www.ridemagazine.com/horse/article/bit-and-cavasons-cruelly-used-horses-and-horse-named-babe',

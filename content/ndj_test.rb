@@ -1,5 +1,5 @@
-# The following variables set here will be used to generate a newsletter from the template.
 # @products = [{name: '', url: '' , price_regular: '', price_sale: ''}, ...]
+@template = "template/ndj_noimages.html.erb"
 
 @products = [
     {
