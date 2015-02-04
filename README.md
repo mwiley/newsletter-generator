@@ -1,5 +1,5 @@
 # Newsletter Generator
-.html.erb templates are stored in the *templates* directory.  
+.html.erb templates are stored in the *template* directory.  
 .rb files containing newsletter content are stored in the *content* directory.
 
 content.rb example:
