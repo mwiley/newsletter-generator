@@ -109,6 +109,10 @@ Newsletter Styling
 }
 #ad-top-img {
     float: right;
+    padding: 2px;
+}
+#ad-top-img > img {
+    border: 1px solid #f0f0f0;
 }
 #subheader {
     padding: 10px 20px;
