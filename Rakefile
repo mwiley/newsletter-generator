@@ -11,9 +11,7 @@ task :new do
   )
 
   File.open(file, "w") do |f|
-    f << <<-EOS.gsub(/^    /, '')
-      @template = "#{"template/" + template + ".html.erb"}"
-    EOS
+    f.write ' @template = ' + "\"template/" + template + ".html.erb\""
   end
 
   puts 'Created new newsletter: ' + file
