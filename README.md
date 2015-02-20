@@ -2,7 +2,7 @@
 .html.erb templates are stored in the *template* directory.  
 .rb files containing newsletter content are stored in the *content* directory.
 
-content.rb example:
+## content.rb example:
 
 ```
 #!ruby
@@ -24,8 +24,7 @@ content.rb example:
 ]
 ```
 
-
-template.html.erb example:
+## template.html.erb example:
 
 ```
 #!ruby
@@ -40,5 +39,22 @@ template.html.erb example:
 <% end %>
 ```
 
+## Command Line Usage:
 
-Command Line Usage: ./make_newsletter.rb content_filename.rb
+### Build a newsletter:
+
+```
+./make_newsletter.rb content_filename.rb
+```
+
+### List available templates:
+
+```
+rake templates
+```
+
+### Create a new newsletter content file
+
+```
+rake new template="newsletter"
+```
