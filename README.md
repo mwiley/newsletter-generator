@@ -4,8 +4,7 @@
 
 ## content.rb example:
 
-```
-#!ruby
+```ruby
 
 @template = "template/ndj_noimages.html.erb"
 @products = [
@@ -26,8 +25,7 @@
 
 ## template.html.erb example:
 
-```
-#!ruby
+```ruby
 
 <% @products.each do |product| %>
     <p style="font-size: 14px;">
