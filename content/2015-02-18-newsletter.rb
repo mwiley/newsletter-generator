@@ -1,3 +1,4 @@
+# Copyright (c) 2015 Ride Publishing
 # @top_ad = { url: "", image: "" } (optional)
 # @articles =  [{ title: '', url: '', photo: '', preview: '', author: '', ad_1: { url: '', image: ''}, ad_2: { url: '', image: ''} }, ...]
 # For each article, author, ad_1, and ad_2 are optional.

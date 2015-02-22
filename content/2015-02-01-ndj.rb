@@ -1,3 +1,4 @@
+# Copyright (c) 2015 Ride Publishing
 # @products = [{name: '', url: '' , price_regular: '', price_sale: ''}, ...]
 @template = "template/ndj_noimages.html.erb"
 
